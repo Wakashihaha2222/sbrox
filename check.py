@@ -19,11 +19,8 @@ CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 API_URL = "https://atlantiscmnt.com/api/robux/stock"
 BUY_LINK = "https://atlantiscmnt.com/robux-120h"
 
-# QUAN TRỌNG: Termux (bot chính) và GitHub Actions (bot dự phòng) là HAI TIẾN
-# TRÌNH ĐỘC LẬP. Nếu cả hai cùng đọc/ghi chung một file "stock.json" và bạn
-# git pull/push qua lại, trạng thái "đã từng thấy giá thấp" của bên này sẽ bị
-# lẫn sang bên kia -> bot có thể im lặng dù nó chưa từng tự thấy giá giảm.
-# Vì vậy mỗi nơi chạy dùng một tên file riêng, không dùng chung.
+# Termux (bot chính) và GitHub Actions (bot dự phòng) là HAI TIẾN TRÌNH ĐỘC LẬP,
+# mỗi bên dùng một file state riêng để không bị lẫn trạng thái qua git pull/push.
 STATE_FILE = os.environ.get("STATE_FILE", "stock_local.json")
 LOG_FILE = os.environ.get("LOG_FILE", "price_log.txt")
 
@@ -104,6 +101,14 @@ def check_stock():
     tiers_list = data.get("tiers", [])
     log_prices(now_str, tiers_list)
 
+    # Gom TẤT CẢ thay đổi trong lần check này lại, rồi gửi MỖI LOẠI một tin
+    # nhắn Telegram DUY NHẤT (thay vì gửi riêng cho từng rate). Nhờ vậy nếu
+    # 2-3 rate cùng đạt ngưỡng trong 1 lần check, bạn nhận được 1 tin gộp đủ
+    # thông tin, thay vì nhiều tin nhắn liên tiếp dễ bị Telegram giới hạn tốc độ.
+    price_hits = []
+    restock_hits = []
+    low_stock_hits = []
+
     for tier in tiers_list:
         price = tier.get("price_per_1000")
         rate = tier.get("rate")
@@ -120,67 +125,65 @@ def check_stock():
 
         stock_str = f"{stock:,}" if isinstance(stock, (int, float)) else str(stock)
 
-        # ---------- 1) Cảnh báo giá giảm dưới ngưỡng ----------
+        # ---------- 1) Giá giảm dưới ngưỡng ----------
         is_below = price <= PRICE_LIMIT
         was_below = prev_price is not None and prev_price <= PRICE_LIMIT
-
         if is_below and not was_below:
-            msg = (
-                "🚨 ROBUX GIÁ SIÊU RẺ!\n\n"
-                f"💰 Giá: {price:,}đ / 1000 R$ (ngưỡng: {PRICE_LIMIT:,}đ)\n"
-                f"📈 Rate: ${rate}\n"
-                f"📦 Stock: {stock_str} R$\n"
-                f"🔗 Mua ngay: {BUY_LINK}\n"
-                f"⏰ {updated_at}"
-            )
-            if send_telegram(msg):
-                print(f"Đã gửi Telegram (giá rẻ) cho rate ${rate} (giá {price:,}đ)")
-                time.sleep(1.2)  # tránh bị Telegram rate-limit khi nhiều tier cùng báo 1 lúc
-            else:
-                print(f"Gửi Telegram THẤT BẠI (giá rẻ) cho rate ${rate}, sẽ thử lại lần sau")
+            price_hits.append(f"• Rate ${rate}: {price:,}đ (stock: {stock_str} R$)")
 
-        # ---------- 2) Cảnh báo RESTOCK: từ hết hàng -> có hàng lại ----------
+        # ---------- 2) RESTOCK: từ hết hàng -> có hàng lại ----------
         is_out_now = isinstance(stock, (int, float)) and stock <= 0
         was_out = isinstance(prev_stock, (int, float)) and prev_stock <= 0
-
         if was_out and not is_out_now:
-            msg = (
-                "✅ ROBUX ĐÃ CÓ HÀNG LẠI!\n\n"
-                f"📈 Rate: ${rate}\n"
-                f"💰 Giá: {price:,}đ / 1000 R$\n"
-                f"📦 Stock: {stock_str} R$\n"
-                f"🔗 Mua ngay: {BUY_LINK}\n"
-                f"⏰ {updated_at}"
-            )
-            if send_telegram(msg):
-                print(f"Đã gửi Telegram (restock) cho rate ${rate}")
-                time.sleep(1.2)
-            else:
-                print(f"Gửi Telegram THẤT BẠI (restock) cho rate ${rate}, sẽ thử lại lần sau")
+            restock_hits.append(f"• Rate ${rate}: {price:,}đ (stock: {stock_str} R$)")
 
-        # ---------- 3) Cảnh báo SẮP HẾT HÀNG (dưới ngưỡng thấp) ----------
+        # ---------- 3) SẮP HẾT HÀNG ----------
         is_low_now = isinstance(stock, (int, float)) and 0 < stock <= STOCK_LOW_THRESHOLD
         was_low = isinstance(prev_stock, (int, float)) and 0 < prev_stock <= STOCK_LOW_THRESHOLD
-
         if is_low_now and not was_low:
-            msg = (
-                "⚠️ ROBUX SẮP HẾT HÀNG!\n\n"
-                f"📈 Rate: ${rate}\n"
-                f"💰 Giá: {price:,}đ / 1000 R$\n"
-                f"📦 Stock còn lại: {stock_str} R$ (ngưỡng cảnh báo: {STOCK_LOW_THRESHOLD:,})\n"
-                f"🔗 Mua ngay: {BUY_LINK}\n"
-                f"⏰ {updated_at}"
-            )
-            if send_telegram(msg):
-                print(f"Đã gửi Telegram (sắp hết hàng) cho rate ${rate}")
-                time.sleep(1.2)
-            else:
-                print(f"Gửi Telegram THẤT BẠI (sắp hết hàng) cho rate ${rate}, sẽ thử lại lần sau")
+            low_stock_hits.append(f"• Rate ${rate}: {price:,}đ (còn {stock_str} R$)")
 
         tiers_state[tier_key] = {
             "last_price": price,
             "last_stock": stock,
         }
+
+    # ---------- Gửi các tin nhắn gộp (mỗi loại 1 tin, nếu có) ----------
+    if price_hits:
+        msg = (
+            "🚨 ROBUX GIÁ SIÊU RẺ! (ngưỡng: {:,}đ)\n\n".format(PRICE_LIMIT)
+            + "\n".join(price_hits)
+            + f"\n\n🔗 Mua ngay: {BUY_LINK}\n⏰ {updated_at}"
+        )
+        if send_telegram(msg):
+            print(f"Đã gửi Telegram (giá rẻ) - {len(price_hits)} rate")
+        else:
+            print(f"Gửi Telegram THẤT BẠI (giá rẻ) - {len(price_hits)} rate, sẽ thử lại lần sau")
+        time.sleep(1.2)
+
+    if restock_hits:
+        msg = (
+            "✅ ROBUX ĐÃ CÓ HÀNG LẠI!\n\n"
+            + "\n".join(restock_hits)
+            + f"\n\n🔗 Mua ngay: {BUY_LINK}\n⏰ {updated_at}"
+        )
+        if send_telegram(msg):
+            print(f"Đã gửi Telegram (restock) - {len(restock_hits)} rate")
+        else:
+            print(f"Gửi Telegram THẤT BẠI (restock) - {len(restock_hits)} rate, sẽ thử lại lần sau")
+        time.sleep(1.2)
+
+    if low_stock_hits:
+        msg = (
+            "⚠️ ROBUX SẮP HẾT HÀNG! (ngưỡng: {:,} R$)\n\n".format(STOCK_LOW_THRESHOLD)
+            + "\n".join(low_stock_hits)
+            + f"\n\n🔗 Mua ngay: {BUY_LINK}\n⏰ {updated_at}"
+        )
+        if send_telegram(msg):
+            print(f"Đã gửi Telegram (sắp hết hàng) - {len(low_stock_hits)} rate")
+        else:
+            print(f"Gửi Telegram THẤT BẠI (sắp hết hàng) - {len(low_stock_hits)} rate, sẽ thử lại lần sau")
+        time.sleep(1.2)
 
     state["tiers"] = tiers_state
     state["last_checked"] = datetime.now().isoformat(timespec="seconds")
