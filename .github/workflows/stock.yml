@@ -23,6 +23,7 @@ jobs:
 
       - name: Run single check
         env:
+          STATE_FILE: "stock.json"
           ATLANTIS_API_KEY: ${{ secrets.ATLANTIS_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -38,4 +39,5 @@ jobs:
           git add stock.json
           git diff --cached --quiet || git commit -m "Update stock state"
           git push
+        
           
