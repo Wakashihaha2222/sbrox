@@ -19,11 +19,14 @@ CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 API_URL = "https://atlantiscmnt.com/api/robux/stock"
 BUY_LINK = "https://atlantiscmnt.com/robux-120h"
 STATE_FILE = "stock.json"
+LOG_FILE = "price_log.txt"
 
 PRICE_LIMIT = int(os.environ.get("PRICE_LIMIT", "118000"))
 STOCK_LOW_THRESHOLD = int(os.environ.get("STOCK_LOW_THRESHOLD", "300"))
-MIN_WAIT = int(os.environ.get("MIN_WAIT_SECONDS", "5"))
-MAX_WAIT = int(os.environ.get("MAX_WAIT_SECONDS", "10"))
+# Poll nhanh hơn (mặc định 2-4s thay vì 5-10s) để giảm khả năng bỏ lỡ
+# những đợt giá giảm chỉ tồn tại trong vài giây.
+MIN_WAIT = int(os.environ.get("MIN_WAIT_SECONDS", "2"))
+MAX_WAIT = int(os.environ.get("MAX_WAIT_SECONDS", "4"))
 RUN_ONCE = os.environ.get("RUN_ONCE", "false").lower() == "true"
 
 if not API_KEY or not BOT_TOKEN or not CHAT_ID:
@@ -61,11 +64,22 @@ def load_state():
 
 
 def save_state(state):
-    # Ghi ra file tạm rồi đổi tên, tránh làm hỏng file nếu bị ngắt giữa chừng
     tmp_path = STATE_FILE + ".tmp"
     with open(tmp_path, "w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=2)
     os.replace(tmp_path, STATE_FILE)
+
+
+def log_prices(timestamp, tiers):
+    try:
+        with open(LOG_FILE, "a", encoding="utf-8") as f:
+            for tier in tiers:
+                rate = tier.get("rate")
+                price = tier.get("price_per_1000")
+                stock = tier.get("stock")
+                f.write(f"{timestamp} | rate={rate} | price={price} | stock={stock}\n")
+    except OSError as e:
+        print("Không ghi được price_log.txt:", e)
 
 
 def check_stock():
@@ -80,16 +94,13 @@ def check_stock():
         print("Lỗi khi gọi API:", e)
         return
 
-    # ====== DÒNG DEBUG TẠM THỜI ======
-    # In ra cấu trúc JSON thật của API để kiểm tra tên field đúng chưa.
-    # Sau khi xác nhận field đúng rồi thì XÓA dòng này đi.
-    print("----- DEBUG: RAW API RESPONSE -----")
-    print(json.dumps(data, ensure_ascii=False, indent=2)[:2000])
-    print("----- END DEBUG -----")
-
     updated_at = data.get("updated_at", datetime.now().isoformat(timespec="seconds"))
+    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    for tier in data.get("tiers", []):
+    tiers_list = data.get("tiers", [])
+    log_prices(now_str, tiers_list)
+
+    for tier in tiers_list:
         price = tier.get("price_per_1000")
         rate = tier.get("rate")
         stock = tier.get("stock")
@@ -97,8 +108,6 @@ def check_stock():
         if price is None or rate is None:
             continue
 
-        # Dùng "rate" làm khóa định danh cho từng gói (KHÔNG dùng stock,
-        # vì stock đổi liên tục và sẽ làm bot gửi tin spam)
         tier_key = str(rate)
         prev = tiers_state.get(tier_key, {
             "last_price": None,
@@ -128,7 +137,7 @@ def check_stock():
                 print(f"Đã gửi Telegram (giá rẻ) cho rate ${rate} (giá {price:,}đ)")
             else:
                 print(f"Gửi Telegram THẤT BẠI (giá rẻ) cho rate ${rate}, sẽ thử lại lần sau")
-                price_alert_sent_ok = False  # không đánh dấu đã gửi, để lần sau thử lại
+                price_alert_sent_ok = False
 
         # ---------- 2) Cảnh báo RESTOCK: từ hết hàng -> có hàng lại ----------
         is_out_now = isinstance(stock, (int, float)) and stock <= 0
@@ -170,7 +179,6 @@ def check_stock():
                 print(f"Gửi Telegram THẤT BẠI (sắp hết hàng) cho rate ${rate}, sẽ thử lại lần sau")
                 low_stock_sent_ok = False
 
-        # ---------- Cập nhật state cho tier này ----------
         tiers_state[tier_key] = {
             "last_price": price,
             "notified_below": is_below if price_alert_sent_ok else was_below,
