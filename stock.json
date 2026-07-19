@@ -14,23 +14,23 @@
     },
     "4.9": {
       "last_price": 139850,
-      "last_stock": 73832
+      "last_stock": 64603
     },
     "5": {
       "last_price": 142500,
-      "last_stock": 1677
+      "last_stock": 1509
     },
     "5.1": {
       "last_price": 145150,
-      "last_stock": 263200
+      "last_stock": 253809
     },
     "5.2": {
       "last_price": 147800,
-      "last_stock": 468397
+      "last_stock": 335107
     },
     "5.3": {
       "last_price": 150450,
-      "last_stock": 233190
+      "last_stock": 231218
     },
     "5.4": {
       "last_price": 153100,
@@ -38,12 +38,12 @@
     },
     "5.5": {
       "last_price": 155750,
-      "last_stock": 197458
+      "last_stock": 194486
     },
     "4.2": {
       "last_price": 121300,
-      "last_stock": 426
+      "last_stock": 3327
     }
   },
-  "last_checked": "2026-07-19T19:47:58"
+  "last_checked": "2026-07-19T20:33:03"
 }
