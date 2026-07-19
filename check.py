@@ -21,6 +21,7 @@ BUY_LINK = "https://atlantiscmnt.com/robux-120h"
 STATE_FILE = "stock.json"
 
 PRICE_LIMIT = int(os.environ.get("PRICE_LIMIT", "118000"))
+STOCK_LOW_THRESHOLD = int(os.environ.get("STOCK_LOW_THRESHOLD", "300"))
 MIN_WAIT = int(os.environ.get("MIN_WAIT_SECONDS", "5"))
 MAX_WAIT = int(os.environ.get("MAX_WAIT_SECONDS", "10"))
 RUN_ONCE = os.environ.get("RUN_ONCE", "false").lower() == "true"
@@ -92,15 +93,22 @@ def check_stock():
         # Dùng "rate" làm khóa định danh cho từng gói (KHÔNG dùng stock,
         # vì stock đổi liên tục và sẽ làm bot gửi tin spam)
         tier_key = str(rate)
-        prev = tiers_state.get(tier_key, {"last_price": None, "notified_below": False})
+        prev = tiers_state.get(tier_key, {
+            "last_price": None,
+            "notified_below": False,
+            "last_stock": None,
+            "was_out_of_stock": False,
+            "notified_low_stock": False,
+        })
 
+        stock_str = f"{stock:,}" if isinstance(stock, (int, float)) else str(stock)
+
+        # ---------- 1) Cảnh báo giá giảm dưới ngưỡng (giữ nguyên như cũ) ----------
         is_below = price <= PRICE_LIMIT
         was_below = prev.get("notified_below", False)
 
-        # Chỉ gửi tin khi giá VỪA chuyển xuống dưới ngưỡng
-        # (nếu giá vẫn ở dưới ngưỡng từ lần trước thì không gửi lại)
+        price_alert_sent_ok = True
         if is_below and not was_below:
-            stock_str = f"{stock:,}" if isinstance(stock, (int, float)) else str(stock)
             msg = (
                 "🚨 ROBUX GIÁ SIÊU RẺ - DƯỚI 118K!\n\n"
                 f"💰 Giá: {price:,}đ / 1000 R$\n"
@@ -109,16 +117,62 @@ def check_stock():
                 f"🔗 Mua ngay: {BUY_LINK}\n"
                 f"⏰ {updated_at}"
             )
-
             if send_telegram(msg):
-                print(f"Đã gửi Telegram cho rate ${rate} (giá {price:,}đ)")
+                print(f"Đã gửi Telegram (giá rẻ) cho rate ${rate} (giá {price:,}đ)")
             else:
-                print(f"Gửi Telegram THẤT BẠI cho rate ${rate}, sẽ thử lại lần sau")
-                # Không đánh dấu đã gửi nếu gửi thất bại, để lần check sau thử lại
-                tiers_state[tier_key] = {"last_price": price, "notified_below": False}
-                continue
+                print(f"Gửi Telegram THẤT BẠI (giá rẻ) cho rate ${rate}, sẽ thử lại lần sau")
+                price_alert_sent_ok = False  # không đánh dấu đã gửi, để lần sau thử lại
 
-        tiers_state[tier_key] = {"last_price": price, "notified_below": is_below}
+        # ---------- 2) Cảnh báo RESTOCK: từ hết hàng -> có hàng lại ----------
+        is_out_now = isinstance(stock, (int, float)) and stock <= 0
+        was_out = prev.get("was_out_of_stock", False)
+
+        restock_sent_ok = True
+        if was_out and not is_out_now:
+            msg = (
+                "✅ ROBUX ĐÃ CÓ HÀNG LẠI!\n\n"
+                f"📈 Rate: ${rate}\n"
+                f"💰 Giá: {price:,}đ / 1000 R$\n"
+                f"📦 Stock: {stock_str} R$\n"
+                f"🔗 Mua ngay: {BUY_LINK}\n"
+                f"⏰ {updated_at}"
+            )
+            if send_telegram(msg):
+                print(f"Đã gửi Telegram (restock) cho rate ${rate}")
+            else:
+                print(f"Gửi Telegram THẤT BẠI (restock) cho rate ${rate}, sẽ thử lại lần sau")
+                restock_sent_ok = False
+
+        # ---------- 3) Cảnh báo SẮP HẾT HÀNG (dưới ngưỡng thấp) ----------
+        is_low_now = isinstance(stock, (int, float)) and 0 < stock <= STOCK_LOW_THRESHOLD
+        was_low = prev.get("notified_low_stock", False)
+
+        low_stock_sent_ok = True
+        if is_low_now and not was_low:
+            msg = (
+                "⚠️ ROBUX SẮP HẾT HÀNG!\n\n"
+                f"📈 Rate: ${rate}\n"
+                f"💰 Giá: {price:,}đ / 1000 R$\n"
+                f"📦 Stock còn lại: {stock_str} R$ (ngưỡng cảnh báo: {STOCK_LOW_THRESHOLD:,})\n"
+                f"🔗 Mua ngay: {BUY_LINK}\n"
+                f"⏰ {updated_at}"
+            )
+            if send_telegram(msg):
+                print(f"Đã gửi Telegram (sắp hết hàng) cho rate ${rate}")
+            else:
+                print(f"Gửi Telegram THẤT BẠI (sắp hết hàng) cho rate ${rate}, sẽ thử lại lần sau")
+                low_stock_sent_ok = False
+
+        # ---------- Cập nhật state cho tier này ----------
+        tiers_state[tier_key] = {
+            "last_price": price,
+            "notified_below": is_below if price_alert_sent_ok else was_below,
+            "last_stock": stock,
+            "was_out_of_stock": is_out_now if restock_sent_ok else was_out,
+            # Reset cờ "đã cảnh báo sắp hết hàng" khi stock đã lên trên ngưỡng lại,
+            # để lần sau nếu tụt xuống thấp lại thì vẫn được cảnh báo tiếp
+            "notified_low_stock": is_low_now if low_stock_sent_ok else was_low,
+        }
 
     state["tiers"] = tiers_state
     state["last_checked"] = datetime.now().isoformat(timespec="seconds")
@@ -132,7 +186,7 @@ def main():
         check_stock()
         return
 
-    print("Bot theo dõi giá Robux đã khởi động (chế độ chạy liên tục)...")
+    print("Bot theo dõi giá & tồn kho Robux đã khởi động (chế độ chạy liên tục)...")
     while True:
         print(f"[{datetime.now().strftime('%H:%M:%S')}] Đang kiểm tra...")
         try:
