@@ -18,10 +18,16 @@ CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 
 API_URL = "https://atlantiscmnt.com/api/robux/stock"
 BUY_LINK = "https://atlantiscmnt.com/robux-120h"
-STATE_FILE = "stock.json"
-LOG_FILE = "price_log.txt"
 
-PRICE_LIMIT = int(os.environ.get("PRICE_LIMIT", "118000"))
+# QUAN TRỌNG: Termux (bot chính) và GitHub Actions (bot dự phòng) là HAI TIẾN
+# TRÌNH ĐỘC LẬP. Nếu cả hai cùng đọc/ghi chung một file "stock.json" và bạn
+# git pull/push qua lại, trạng thái "đã từng thấy giá thấp" của bên này sẽ bị
+# lẫn sang bên kia -> bot có thể im lặng dù nó chưa từng tự thấy giá giảm.
+# Vì vậy mỗi nơi chạy dùng một tên file riêng, không dùng chung.
+STATE_FILE = os.environ.get("STATE_FILE", "stock_local.json")
+LOG_FILE = os.environ.get("LOG_FILE", "price_log.txt")
+
+PRICE_LIMIT = int(os.environ.get("PRICE_LIMIT", "135000"))
 STOCK_LOW_THRESHOLD = int(os.environ.get("STOCK_LOW_THRESHOLD", "300"))
 MIN_WAIT = int(os.environ.get("MIN_WAIT_SECONDS", "2"))
 MAX_WAIT = int(os.environ.get("MAX_WAIT_SECONDS", "4"))
@@ -115,10 +121,6 @@ def check_stock():
         stock_str = f"{stock:,}" if isinstance(stock, (int, float)) else str(stock)
 
         # ---------- 1) Cảnh báo giá giảm dưới ngưỡng ----------
-        # QUAN TRỌNG: was_below được TÍNH LẠI từ last_price so với PRICE_LIMIT
-        # HIỆN TẠI mỗi lần chạy, KHÔNG lưu một cờ boolean cố định.
-        # Nhờ vậy nếu bạn đổi PRICE_LIMIT trong .env, bot sẽ áp dụng ngay
-        # lập tức, không bị kẹt bởi trạng thái "đã từng thông báo" cũ.
         is_below = price <= PRICE_LIMIT
         was_below = prev_price is not None and prev_price <= PRICE_LIMIT
 
@@ -133,6 +135,7 @@ def check_stock():
             )
             if send_telegram(msg):
                 print(f"Đã gửi Telegram (giá rẻ) cho rate ${rate} (giá {price:,}đ)")
+                time.sleep(1.2)  # tránh bị Telegram rate-limit khi nhiều tier cùng báo 1 lúc
             else:
                 print(f"Gửi Telegram THẤT BẠI (giá rẻ) cho rate ${rate}, sẽ thử lại lần sau")
 
@@ -151,12 +154,11 @@ def check_stock():
             )
             if send_telegram(msg):
                 print(f"Đã gửi Telegram (restock) cho rate ${rate}")
+                time.sleep(1.2)
             else:
                 print(f"Gửi Telegram THẤT BẠI (restock) cho rate ${rate}, sẽ thử lại lần sau")
 
         # ---------- 3) Cảnh báo SẮP HẾT HÀNG (dưới ngưỡng thấp) ----------
-        # Cũng tính lại was_low từ prev_stock so với STOCK_LOW_THRESHOLD hiện tại,
-        # cùng lý do như trên - đổi ngưỡng trong .env có hiệu lực ngay.
         is_low_now = isinstance(stock, (int, float)) and 0 < stock <= STOCK_LOW_THRESHOLD
         was_low = isinstance(prev_stock, (int, float)) and 0 < prev_stock <= STOCK_LOW_THRESHOLD
 
@@ -171,10 +173,10 @@ def check_stock():
             )
             if send_telegram(msg):
                 print(f"Đã gửi Telegram (sắp hết hàng) cho rate ${rate}")
+                time.sleep(1.2)
             else:
                 print(f"Gửi Telegram THẤT BẠI (sắp hết hàng) cho rate ${rate}, sẽ thử lại lần sau")
 
-        # ---------- Cập nhật state cho tier này (chỉ lưu giá trị thực tế) ----------
         tiers_state[tier_key] = {
             "last_price": price,
             "last_stock": stock,
@@ -192,6 +194,7 @@ def main():
         return
 
     print("Bot theo dõi giá & tồn kho Robux đã khởi động (chế độ chạy liên tục)...")
+    print(f"Dùng state file: {STATE_FILE}")
     while True:
         print(f"[{datetime.now().strftime('%H:%M:%S')}] Đang kiểm tra...")
         try:
