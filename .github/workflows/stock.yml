@@ -26,8 +26,9 @@ jobs:
           ATLANTIS_API_KEY: ${{ secrets.ATLANTIS_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          PRICE_LIMIT: "118000"
+          PRICE_LIMIT: "135000"
           STOCK_LOW_THRESHOLD: "300"
+          STATE_FILE: "stock.json"
           RUN_ONCE: "true"
         run: python check.py
 
@@ -38,4 +39,3 @@ jobs:
           git add stock.json
           git diff --cached --quiet || git commit -m "Update stock state"
           git push
-          
