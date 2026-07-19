@@ -1,3 +1,45 @@
 {
-  "tiers": {}
+  "tiers": {
+    "4.5": {
+      "last_price": 129250,
+      "last_stock": 669
+    },
+    "4.6": {
+      "last_price": 131900,
+      "last_stock": 108930
+    },
+    "4.8": {
+      "last_price": 137200,
+      "last_stock": 9227
+    },
+    "4.9": {
+      "last_price": 139850,
+      "last_stock": 1812
+    },
+    "5": {
+      "last_price": 142500,
+      "last_stock": 60136
+    },
+    "5.1": {
+      "last_price": 145150,
+      "last_stock": 94708
+    },
+    "5.2": {
+      "last_price": 147800,
+      "last_stock": 546499
+    },
+    "5.3": {
+      "last_price": 150450,
+      "last_stock": 253380
+    },
+    "5.4": {
+      "last_price": 153100,
+      "last_stock": 151076
+    },
+    "5.5": {
+      "last_price": 155750,
+      "last_stock": 214215
+    }
+  },
+  "last_checked": "2026-07-19T16:31:49"
 }
