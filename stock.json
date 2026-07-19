@@ -1,3 +1,47 @@
 {
-  "tiers": {}
+  "tiers": {
+    "4.6": {
+      "last_price": 131900,
+      "notified_below": false,
+      "last_stock": 133524,
+      "was_out_of_stock": false,
+      "notified_low_stock": false
+    },
+    "5": {
+      "last_price": 142500,
+      "notified_below": false,
+      "last_stock": 3720,
+      "was_out_of_stock": false,
+      "notified_low_stock": false
+    },
+    "5.2": {
+      "last_price": 147800,
+      "notified_below": false,
+      "last_stock": 52313,
+      "was_out_of_stock": false,
+      "notified_low_stock": false
+    },
+    "5.3": {
+      "last_price": 150450,
+      "notified_below": false,
+      "last_stock": 370568,
+      "was_out_of_stock": false,
+      "notified_low_stock": false
+    },
+    "5.4": {
+      "last_price": 153100,
+      "notified_below": false,
+      "last_stock": 153442,
+      "was_out_of_stock": false,
+      "notified_low_stock": false
+    },
+    "5.5": {
+      "last_price": 155750,
+      "notified_below": false,
+      "last_stock": 218200,
+      "was_out_of_stock": false,
+      "notified_low_stock": false
+    }
+  },
+  "last_checked": "2026-07-19T14:04:56"
 }
