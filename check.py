@@ -80,6 +80,13 @@ def check_stock():
         print("Lỗi khi gọi API:", e)
         return
 
+    # ====== DÒNG DEBUG TẠM THỜI ======
+    # In ra cấu trúc JSON thật của API để kiểm tra tên field đúng chưa.
+    # Sau khi xác nhận field đúng rồi thì XÓA dòng này đi.
+    print("----- DEBUG: RAW API RESPONSE -----")
+    print(json.dumps(data, ensure_ascii=False, indent=2)[:2000])
+    print("----- END DEBUG -----")
+
     updated_at = data.get("updated_at", datetime.now().isoformat(timespec="seconds"))
 
     for tier in data.get("tiers", []):
@@ -103,7 +110,7 @@ def check_stock():
 
         stock_str = f"{stock:,}" if isinstance(stock, (int, float)) else str(stock)
 
-        # ---------- 1) Cảnh báo giá giảm dưới ngưỡng (giữ nguyên như cũ) ----------
+        # ---------- 1) Cảnh báo giá giảm dưới ngưỡng ----------
         is_below = price <= PRICE_LIMIT
         was_below = prev.get("notified_below", False)
 
@@ -169,8 +176,6 @@ def check_stock():
             "notified_below": is_below if price_alert_sent_ok else was_below,
             "last_stock": stock,
             "was_out_of_stock": is_out_now if restock_sent_ok else was_out,
-            # Reset cờ "đã cảnh báo sắp hết hàng" khi stock đã lên trên ngưỡng lại,
-            # để lần sau nếu tụt xuống thấp lại thì vẫn được cảnh báo tiếp
             "notified_low_stock": is_low_now if low_stock_sent_ok else was_low,
         }
 
@@ -181,7 +186,6 @@ def check_stock():
 
 def main():
     if RUN_ONCE:
-        # Chế độ chạy 1 lần rồi thoát (dùng cho GitHub Actions backup)
         print("Chạy kiểm tra một lần (RUN_ONCE=true)...")
         check_stock()
         return
@@ -192,7 +196,6 @@ def main():
         try:
             check_stock()
         except Exception as e:
-            # Bắt mọi lỗi bất ngờ để vòng lặp không bị chết hẳn
             print("Lỗi không mong muốn:", e)
 
         wait = random.randint(MIN_WAIT, MAX_WAIT)
