@@ -28,6 +28,8 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           PRICE_LIMIT: "135000"
           STOCK_LOW_THRESHOLD: "300"
+          STOCK_CHANGE_THRESHOLD: "1000"
+          REMINDER_INTERVAL_SECONDS: "300"
           STATE_FILE: "stock.json"
           RUN_ONCE: "true"
         run: python check.py
