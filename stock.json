@@ -6,7 +6,7 @@
     },
     "4.6": {
       "last_price": 131900,
-      "last_stock": 57815
+      "last_stock": 31151
     },
     "4.8": {
       "last_price": 137200,
@@ -14,39 +14,39 @@
     },
     "4.9": {
       "last_price": 139850,
-      "last_stock": 406397
+      "last_stock": 165869
     },
     "5": {
       "last_price": 142500,
-      "last_stock": 172696
+      "last_stock": 246199
     },
     "5.1": {
       "last_price": 145150,
-      "last_stock": 294128
+      "last_stock": 137181
     },
     "5.2": {
       "last_price": 147800,
-      "last_stock": 916000
+      "last_stock": 877357
     },
     "5.3": {
       "last_price": 150450,
-      "last_stock": 226021
+      "last_stock": 237980
     },
     "5.4": {
       "last_price": 153100,
-      "last_stock": 148102
+      "last_stock": 45982
     },
     "5.5": {
       "last_price": 155750,
-      "last_stock": 194200
+      "last_stock": 196594
     },
     "4.2": {
       "last_price": 121300,
-      "last_stock": 6843
+      "last_stock": 367
     },
     "4.7": {
       "last_price": 134550,
-      "last_stock": 107416
+      "last_stock": 3028
     },
     "4.4": {
       "last_price": 126600,
@@ -61,5 +61,5 @@
       "last_stock": 23131
     }
   },
-  "last_checked": "2026-07-20T01:07:10"
+  "last_checked": "2026-07-20T07:47:52"
 }
