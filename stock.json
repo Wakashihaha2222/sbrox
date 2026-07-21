@@ -9,10 +9,10 @@
     },
     "4.6": {
       "last_price": 131900,
-      "last_stock": 7090,
+      "last_stock": 204706,
       "target_active": true,
-      "target_notified_stock": 7090,
-      "target_last_notified_ts": 1784590358.305914
+      "target_notified_stock": 204706,
+      "target_last_notified_ts": 1784595702.2360358
     },
     "4.8": {
       "last_price": 137200,
@@ -30,21 +30,21 @@
     },
     "5": {
       "last_price": 142500,
-      "last_stock": 580653,
+      "last_stock": 647665,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.1": {
       "last_price": 145150,
-      "last_stock": 625153,
+      "last_stock": 598186,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
       "last_price": 147800,
-      "last_stock": 888847,
+      "last_stock": 1119453,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -65,7 +65,7 @@
     },
     "5.5": {
       "last_price": 155750,
-      "last_stock": 313528,
+      "last_stock": 308246,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -76,10 +76,10 @@
     },
     "4.7": {
       "last_price": 134550,
-      "last_stock": 425369,
+      "last_stock": 215330,
       "target_active": true,
-      "target_notified_stock": 425369,
-      "target_last_notified_ts": 1784590358.305914
+      "target_notified_stock": 215330,
+      "target_last_notified_ts": 1784595702.2360358
     },
     "4.4": {
       "last_price": 126600,
@@ -105,7 +105,14 @@
       "target_active": true,
       "target_notified_stock": 715,
       "target_last_notified_ts": 1784590358.305914
+    },
+    "2.6": {
+      "last_price": 78900,
+      "last_stock": 729,
+      "target_active": true,
+      "target_notified_stock": 729,
+      "target_last_notified_ts": 1784595702.2360358
     }
   },
-  "last_checked": "2026-07-20T23:32:41"
+  "last_checked": "2026-07-21T01:01:45"
 }
