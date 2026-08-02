@@ -16,7 +16,7 @@
     },
     "4.8": {
       "last_price": 142960,
-      "last_stock": 46572,
+      "last_stock": 42453,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -30,21 +30,21 @@
     },
     "5": {
       "last_price": 148500,
-      "last_stock": 579109,
+      "last_stock": 383663,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.1": {
       "last_price": 151270,
-      "last_stock": 144852,
+      "last_stock": 126038,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
       "last_price": 154040,
-      "last_stock": 1131856,
+      "last_stock": 1116813,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -93,24 +93,24 @@
     },
     "3.9": {
       "last_price": 118030,
-      "last_stock": 125409,
+      "last_stock": 117612,
       "target_active": true,
-      "target_notified_stock": 125409,
-      "target_last_notified_ts": 1785679934.0968018
+      "target_notified_stock": 117612,
+      "target_last_notified_ts": 1785683860.603082
     },
     "4": {
       "last_price": 120800,
-      "last_stock": 2230,
+      "last_stock": 1401,
       "target_active": true,
       "target_notified_stock": 2005,
-      "target_last_notified_ts": 1785679934.0968018
+      "target_last_notified_ts": 1785683860.603082
     },
     "4.3": {
       "last_price": 129110,
-      "last_stock": 13920,
+      "last_stock": 876,
       "target_active": true,
-      "target_notified_stock": 13920,
-      "target_last_notified_ts": 1785665926.1221604
+      "target_notified_stock": 876,
+      "target_last_notified_ts": 1785683860.603082
     },
     "2.6": {
       "last_price": 82020,
@@ -162,5 +162,5 @@
       "target_last_notified_ts": 1785642455.399338
     }
   },
-  "last_checked": "2026-08-02T14:12:17"
+  "last_checked": "2026-08-02T15:17:43"
 }
