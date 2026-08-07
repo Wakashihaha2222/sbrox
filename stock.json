@@ -2,10 +2,10 @@
   "tiers": {
     "4.5": {
       "last_price": 134650,
-      "last_stock": 2577,
+      "last_stock": 108544,
       "target_active": true,
-      "target_notified_stock": 2577,
-      "target_last_notified_ts": 1786073097.3520894
+      "target_notified_stock": 108544,
+      "target_last_notified_ts": 1786083338.3963616
     },
     "4.6": {
       "last_price": 137420,
@@ -16,35 +16,35 @@
     },
     "4.8": {
       "last_price": 142960,
-      "last_stock": 139101,
+      "last_stock": 111585,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "4.9": {
       "last_price": 145730,
-      "last_stock": 1511,
+      "last_stock": 361,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5": {
       "last_price": 148500,
-      "last_stock": 300956,
+      "last_stock": 264951,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.1": {
       "last_price": 151270,
-      "last_stock": 270821,
+      "last_stock": 265769,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
       "last_price": 154040,
-      "last_stock": 461648,
+      "last_stock": 396959,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -72,10 +72,10 @@
     },
     "4.2": {
       "last_price": 126340,
-      "last_stock": 6537,
+      "last_stock": 1572,
       "target_active": true,
-      "target_notified_stock": 6537,
-      "target_last_notified_ts": 1786079349.2589202
+      "target_notified_stock": 1572,
+      "target_last_notified_ts": 1786083338.3963616
     },
     "4.7": {
       "last_price": 140190,
@@ -162,5 +162,5 @@
       "target_last_notified_ts": 1785642455.399338
     }
   },
-  "last_checked": "2026-08-07T05:09:11"
+  "last_checked": "2026-08-07T06:15:40"
 }
