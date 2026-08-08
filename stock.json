@@ -16,7 +16,7 @@
     },
     "4.8": {
       "last_price": 142960,
-      "last_stock": 309,
+      "last_stock": 508,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -30,35 +30,35 @@
     },
     "5": {
       "last_price": 148500,
-      "last_stock": 241380,
+      "last_stock": 185600,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.1": {
       "last_price": 151270,
-      "last_stock": 228748,
+      "last_stock": 306766,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
       "last_price": 154040,
-      "last_stock": 898804,
+      "last_stock": 881583,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.3": {
       "last_price": 156810,
-      "last_stock": 77757,
+      "last_stock": 70291,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.4": {
       "last_price": 159580,
-      "last_stock": 313709,
+      "last_stock": 300209,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -107,10 +107,10 @@
     },
     "4.3": {
       "last_price": 129110,
-      "last_stock": 4056,
+      "last_stock": 9400,
       "target_active": true,
-      "target_notified_stock": 4056,
-      "target_last_notified_ts": 1786223011.7357705
+      "target_notified_stock": 9400,
+      "target_last_notified_ts": 1786225102.4206352
     },
     "2.6": {
       "last_price": 82020,
@@ -156,11 +156,11 @@
     },
     "3.8": {
       "last_price": 115260,
-      "last_stock": 166799,
+      "last_stock": 747,
       "target_active": true,
-      "target_notified_stock": 166799,
-      "target_last_notified_ts": 1785642455.399338
+      "target_notified_stock": 747,
+      "target_last_notified_ts": 1786225102.4206352
     }
   },
-  "last_checked": "2026-08-08T21:03:33"
+  "last_checked": "2026-08-08T21:38:24"
 }
