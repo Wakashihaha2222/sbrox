@@ -16,42 +16,42 @@
     },
     "4.8": {
       "last_price": 142960,
-      "last_stock": 14811,
+      "last_stock": 46047,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "4.9": {
       "last_price": 145730,
-      "last_stock": 69971,
+      "last_stock": 69561,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5": {
       "last_price": 148500,
-      "last_stock": 352250,
+      "last_stock": 352444,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.1": {
       "last_price": 151270,
-      "last_stock": 163165,
+      "last_stock": 340635,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
       "last_price": 154040,
-      "last_stock": 332229,
+      "last_stock": 334077,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.3": {
       "last_price": 156810,
-      "last_stock": 68433,
+      "last_stock": 68356,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -65,7 +65,7 @@
     },
     "5.5": {
       "last_price": 162350,
-      "last_stock": 19994,
+      "last_stock": 24508,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -100,10 +100,10 @@
     },
     "4": {
       "last_price": 120800,
-      "last_stock": 356,
+      "last_stock": 2023,
       "target_active": true,
-      "target_notified_stock": 356,
-      "target_last_notified_ts": 1786295948.0946414
+      "target_notified_stock": 2023,
+      "target_last_notified_ts": 1786297819.9815495
     },
     "4.3": {
       "last_price": 129110,
@@ -162,5 +162,5 @@
       "target_last_notified_ts": 1786225102.4206352
     }
   },
-  "last_checked": "2026-08-09T17:19:11"
+  "last_checked": "2026-08-09T17:50:21"
 }
