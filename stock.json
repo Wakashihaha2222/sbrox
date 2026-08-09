@@ -2,10 +2,10 @@
   "tiers": {
     "4.5": {
       "last_price": 134650,
-      "last_stock": 2530,
+      "last_stock": 36311,
       "target_active": true,
-      "target_notified_stock": 2070,
-      "target_last_notified_ts": 1786242128.6047664
+      "target_notified_stock": 36311,
+      "target_last_notified_ts": 1786247717.3323762
     },
     "4.6": {
       "last_price": 137420,
@@ -16,35 +16,35 @@
     },
     "4.8": {
       "last_price": 142960,
-      "last_stock": 561163,
+      "last_stock": 472353,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "4.9": {
       "last_price": 145730,
-      "last_stock": 55381,
+      "last_stock": 39718,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5": {
       "last_price": 148500,
-      "last_stock": 59336,
+      "last_stock": 46545,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.1": {
       "last_price": 151270,
-      "last_stock": 295812,
+      "last_stock": 305970,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
       "last_price": 154040,
-      "last_stock": 928455,
+      "last_stock": 969632,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -100,10 +100,10 @@
     },
     "4": {
       "last_price": 120800,
-      "last_stock": 16966,
+      "last_stock": 2269,
       "target_active": true,
-      "target_notified_stock": 16966,
-      "target_last_notified_ts": 1786242128.6047664
+      "target_notified_stock": 2269,
+      "target_last_notified_ts": 1786247717.3323762
     },
     "4.3": {
       "last_price": 129110,
@@ -162,5 +162,5 @@
       "target_last_notified_ts": 1786225102.4206352
     }
   },
-  "last_checked": "2026-08-09T02:22:12"
+  "last_checked": "2026-08-09T03:55:19"
 }
