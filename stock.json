@@ -2,10 +2,10 @@
   "tiers": {
     "4.5": {
       "last_price": 134650,
-      "last_stock": 33458,
+      "last_stock": 29737,
       "target_active": true,
-      "target_notified_stock": 33458,
-      "target_last_notified_ts": 1786275827.7108543
+      "target_notified_stock": 29737,
+      "target_last_notified_ts": 1786283709.2673013
     },
     "4.6": {
       "last_price": 137420,
@@ -16,35 +16,35 @@
     },
     "4.8": {
       "last_price": 142960,
-      "last_stock": 119803,
+      "last_stock": 51342,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "4.9": {
       "last_price": 145730,
-      "last_stock": 31855,
+      "last_stock": 78048,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5": {
       "last_price": 148500,
-      "last_stock": 245045,
+      "last_stock": 227768,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.1": {
       "last_price": 151270,
-      "last_stock": 73563,
+      "last_stock": 963,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
       "last_price": 154040,
-      "last_stock": 702883,
+      "last_stock": 796876,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -149,10 +149,10 @@
     },
     "3.5": {
       "last_price": 106950,
-      "last_stock": 249239,
+      "last_stock": 286531,
       "target_active": true,
-      "target_notified_stock": 249239,
-      "target_last_notified_ts": 1785318572.4350345
+      "target_notified_stock": 286531,
+      "target_last_notified_ts": 1786283709.2673013
     },
     "3.8": {
       "last_price": 115260,
@@ -162,5 +162,5 @@
       "target_last_notified_ts": 1786225102.4206352
     }
   },
-  "last_checked": "2026-08-09T13:06:20"
+  "last_checked": "2026-08-09T13:55:11"
 }
