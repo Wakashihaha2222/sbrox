@@ -2,14 +2,14 @@
   "tiers": {
     "4.5": {
       "last_price": 134650,
-      "last_stock": 8958,
+      "last_stock": 55663,
       "target_active": true,
-      "target_notified_stock": 8958,
-      "target_last_notified_ts": 1786299422.448602
+      "target_notified_stock": 55663,
+      "target_last_notified_ts": 1786305717.2151134
     },
     "4.6": {
       "last_price": 137420,
-      "last_stock": 1188,
+      "last_stock": 40264,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -23,28 +23,28 @@
     },
     "4.9": {
       "last_price": 145730,
-      "last_stock": 182259,
+      "last_stock": 180616,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5": {
       "last_price": 148500,
-      "last_stock": 228999,
+      "last_stock": 217319,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.1": {
       "last_price": 151270,
-      "last_stock": 95336,
+      "last_stock": 91124,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
       "last_price": 154040,
-      "last_stock": 626823,
+      "last_stock": 669646,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -65,7 +65,7 @@
     },
     "5.5": {
       "last_price": 162350,
-      "last_stock": 22633,
+      "last_stock": 23580,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -79,7 +79,7 @@
     },
     "4.7": {
       "last_price": 140190,
-      "last_stock": 51414,
+      "last_stock": 21739,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -162,5 +162,5 @@
       "target_last_notified_ts": 1786225102.4206352
     }
   },
-  "last_checked": "2026-08-09T19:40:13"
+  "last_checked": "2026-08-09T20:01:58"
 }
