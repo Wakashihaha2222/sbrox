@@ -2,10 +2,10 @@
   "tiers": {
     "4.5": {
       "last_price": 134650,
-      "last_stock": 28862,
+      "last_stock": 5310,
       "target_active": true,
-      "target_notified_stock": 28862,
-      "target_last_notified_ts": 1786406006.483659
+      "target_notified_stock": 5310,
+      "target_last_notified_ts": 1786408765.2775536
     },
     "4.6": {
       "last_price": 137420,
@@ -16,35 +16,35 @@
     },
     "4.8": {
       "last_price": 142960,
-      "last_stock": 327068,
+      "last_stock": 380682,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "4.9": {
       "last_price": 145730,
-      "last_stock": 38193,
+      "last_stock": 23981,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5": {
       "last_price": 148500,
-      "last_stock": 272515,
+      "last_stock": 293112,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.1": {
       "last_price": 151270,
-      "last_stock": 515852,
+      "last_stock": 590234,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
       "last_price": 154040,
-      "last_stock": 345858,
+      "last_stock": 290546,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -65,17 +65,17 @@
     },
     "5.5": {
       "last_price": 162350,
-      "last_stock": 33652,
+      "last_stock": 357982,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "4.2": {
       "last_price": 126340,
-      "last_stock": 1323,
+      "last_stock": 530,
       "target_active": true,
       "target_notified_stock": 988,
-      "target_last_notified_ts": 1786406006.483659
+      "target_last_notified_ts": 1786408765.2775536
     },
     "4.7": {
       "last_price": 140190,
@@ -169,5 +169,5 @@
       "target_last_notified_ts": 1786391962.9107907
     }
   },
-  "last_checked": "2026-08-10T23:53:29"
+  "last_checked": "2026-08-11T00:39:28"
 }
