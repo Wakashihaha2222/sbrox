@@ -2,10 +2,10 @@
   "tiers": {
     "4.5": {
       "last_price": 134650,
-      "last_stock": 91764,
+      "last_stock": 42815,
       "target_active": true,
-      "target_notified_stock": 91764,
-      "target_last_notified_ts": 1786489852.6672926
+      "target_notified_stock": 42815,
+      "target_last_notified_ts": 1786492585.0545502
     },
     "4.6": {
       "last_price": 137420,
@@ -16,35 +16,35 @@
     },
     "4.8": {
       "last_price": 142960,
-      "last_stock": 83694,
+      "last_stock": 48231,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "4.9": {
       "last_price": 145730,
-      "last_stock": 95003,
+      "last_stock": 69644,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5": {
       "last_price": 148500,
-      "last_stock": 303592,
+      "last_stock": 334280,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.1": {
       "last_price": 151270,
-      "last_stock": 248992,
+      "last_stock": 563831,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
       "last_price": 154040,
-      "last_stock": 216721,
+      "last_stock": 305088,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -86,10 +86,10 @@
     },
     "4.4": {
       "last_price": 131880,
-      "last_stock": 6598,
+      "last_stock": 20239,
       "target_active": true,
-      "target_notified_stock": 6598,
-      "target_last_notified_ts": 1786487249.6508775
+      "target_notified_stock": 20239,
+      "target_last_notified_ts": 1786492585.0545502
     },
     "3.9": {
       "last_price": 118030,
@@ -169,5 +169,5 @@
       "target_last_notified_ts": 1786489852.6672926
     }
   },
-  "last_checked": "2026-08-11T23:10:55"
+  "last_checked": "2026-08-11T23:56:26"
 }
