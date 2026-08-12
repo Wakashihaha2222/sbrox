@@ -2,10 +2,10 @@
   "tiers": {
     "4.5": {
       "last_price": 134650,
-      "last_stock": 75448,
+      "last_stock": 66743,
       "target_active": true,
-      "target_notified_stock": 75448,
-      "target_last_notified_ts": 1786530564.5977442
+      "target_notified_stock": 66743,
+      "target_last_notified_ts": 1786533678.9290352
     },
     "4.6": {
       "last_price": 137420,
@@ -16,35 +16,35 @@
     },
     "4.8": {
       "last_price": 142960,
-      "last_stock": 130506,
+      "last_stock": 80673,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "4.9": {
       "last_price": 145730,
-      "last_stock": 9482,
+      "last_stock": 356513,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5": {
       "last_price": 148500,
-      "last_stock": 1129540,
+      "last_stock": 661043,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.1": {
       "last_price": 151270,
-      "last_stock": 530753,
+      "last_stock": 487173,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
       "last_price": 154040,
-      "last_stock": 707575,
+      "last_stock": 772447,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -65,7 +65,7 @@
     },
     "5.5": {
       "last_price": 162350,
-      "last_stock": 368621,
+      "last_stock": 349049,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -107,10 +107,10 @@
     },
     "4.3": {
       "last_price": 129110,
-      "last_stock": 46218,
+      "last_stock": 43346,
       "target_active": true,
-      "target_notified_stock": 46218,
-      "target_last_notified_ts": 1786530564.5977442
+      "target_notified_stock": 43346,
+      "target_last_notified_ts": 1786533678.9290352
     },
     "2.6": {
       "last_price": 82020,
@@ -169,5 +169,5 @@
       "target_last_notified_ts": 1786497021.530654
     }
   },
-  "last_checked": "2026-08-12T10:29:26"
+  "last_checked": "2026-08-12T11:21:20"
 }
