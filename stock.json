@@ -2,10 +2,10 @@
   "tiers": {
     "4.5": {
       "last_price": 134650,
-      "last_stock": 71874,
+      "last_stock": 66437,
       "target_active": true,
-      "target_notified_stock": 71874,
-      "target_last_notified_ts": 1787114032.3382945
+      "target_notified_stock": 66437,
+      "target_last_notified_ts": 1787115882.412239
     },
     "4.6": {
       "last_price": 137420,
@@ -30,7 +30,7 @@
     },
     "5": {
       "last_price": 148500,
-      "last_stock": 1446010,
+      "last_stock": 1448027,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -79,17 +79,17 @@
     },
     "4.7": {
       "last_price": 140190,
-      "last_stock": 175019,
+      "last_stock": 162849,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "4.4": {
       "last_price": 131880,
-      "last_stock": 32111,
+      "last_stock": 77525,
       "target_active": true,
-      "target_notified_stock": 32111,
-      "target_last_notified_ts": 1787114032.3382945
+      "target_notified_stock": 77525,
+      "target_last_notified_ts": 1787115882.412239
     },
     "3.9": {
       "last_price": 118030,
@@ -107,10 +107,10 @@
     },
     "4.3": {
       "last_price": 129110,
-      "last_stock": 18207,
+      "last_stock": 39222,
       "target_active": true,
-      "target_notified_stock": 18207,
-      "target_last_notified_ts": 1787114032.3382945
+      "target_notified_stock": 39222,
+      "target_last_notified_ts": 1787115882.412239
     },
     "2.6": {
       "last_price": 82020,
@@ -195,7 +195,14 @@
       "target_active": true,
       "target_notified_stock": 395,
       "target_last_notified_ts": 1786880802.9298718
+    },
+    "2": {
+      "last_price": 65400,
+      "last_stock": 1048,
+      "target_active": true,
+      "target_notified_stock": 1048,
+      "target_last_notified_ts": 1787115882.412239
     }
   },
-  "last_checked": "2026-08-19T04:33:54"
+  "last_checked": "2026-08-19T05:04:45"
 }
