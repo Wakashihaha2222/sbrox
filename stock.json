@@ -2,24 +2,24 @@
   "tiers": {
     "4.5": {
       "last_price": 127000,
-      "last_stock": 20583,
+      "last_stock": 18801,
       "target_active": true,
-      "target_notified_stock": 20583,
-      "target_last_notified_ts": 1787483426.3094218
+      "target_notified_stock": 18801,
+      "target_last_notified_ts": 1787486442.045545
     },
     "4.6": {
       "last_price": 129600,
-      "last_stock": 10070,
+      "last_stock": 5639,
       "target_active": true,
-      "target_notified_stock": 10070,
-      "target_last_notified_ts": 1787483426.3094218
+      "target_notified_stock": 5639,
+      "target_last_notified_ts": 1787486442.045545
     },
     "4.8": {
       "last_price": 134800,
-      "last_stock": 333235,
+      "last_stock": 319597,
       "target_active": true,
-      "target_notified_stock": 333235,
-      "target_last_notified_ts": 1787485728.6064441
+      "target_notified_stock": 319597,
+      "target_last_notified_ts": 1787486442.045545
     },
     "4.9": {
       "last_price": 137400,
@@ -30,7 +30,7 @@
     },
     "5": {
       "last_price": 140000,
-      "last_stock": 682868,
+      "last_stock": 676870,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -44,7 +44,7 @@
     },
     "5.2": {
       "last_price": 145200,
-      "last_stock": 1091838,
+      "last_stock": 1060799,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -79,10 +79,10 @@
     },
     "4.7": {
       "last_price": 132200,
-      "last_stock": 198200,
+      "last_stock": 187038,
       "target_active": true,
-      "target_notified_stock": 198200,
-      "target_last_notified_ts": 1787485728.6064441
+      "target_notified_stock": 187038,
+      "target_last_notified_ts": 1787486442.045545
     },
     "4.4": {
       "last_price": 124400,
@@ -204,5 +204,5 @@
       "target_last_notified_ts": 1787115882.412239
     }
   },
-  "last_checked": "2026-08-23T11:48:50"
+  "last_checked": "2026-08-23T12:00:43"
 }
