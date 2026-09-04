@@ -23,17 +23,17 @@
     },
     "4.9": {
       "last_price": 132500,
-      "last_stock": 79951,
+      "last_stock": 238646,
       "target_active": true,
-      "target_notified_stock": 79951,
-      "target_last_notified_ts": 1788516431.5110462
+      "target_notified_stock": 238646,
+      "target_last_notified_ts": 1788531410.0048163
     },
     "5": {
       "last_price": 135000,
-      "last_stock": 412243,
+      "last_stock": 380638,
       "target_active": true,
-      "target_notified_stock": 412243,
-      "target_last_notified_ts": 1788516431.5110462
+      "target_notified_stock": 380638,
+      "target_last_notified_ts": 1788531410.0048163
     },
     "5.1": {
       "last_price": 137500,
@@ -44,7 +44,7 @@
     },
     "5.2": {
       "last_price": 140000,
-      "last_stock": 932264,
+      "last_stock": 557359,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -58,7 +58,7 @@
     },
     "5.4": {
       "last_price": 145000,
-      "last_stock": 5441,
+      "last_stock": 10470,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -79,10 +79,10 @@
     },
     "4.7": {
       "last_price": 127500,
-      "last_stock": 42327,
+      "last_stock": 1271,
       "target_active": true,
-      "target_notified_stock": 42327,
-      "target_last_notified_ts": 1788484557.8147206
+      "target_notified_stock": 1271,
+      "target_last_notified_ts": 1788531410.0048163
     },
     "4.4": {
       "last_price": 120000,
@@ -93,10 +93,10 @@
     },
     "3.9": {
       "last_price": 107500,
-      "last_stock": 1000,
+      "last_stock": 588,
       "target_active": true,
       "target_notified_stock": 380,
-      "target_last_notified_ts": 1788516431.5110462
+      "target_last_notified_ts": 1788531410.0048163
     },
     "4": {
       "last_price": 110000,
@@ -204,5 +204,5 @@
       "target_last_notified_ts": 1787489059.0822055
     }
   },
-  "last_checked": "2026-09-04T10:07:15"
+  "last_checked": "2026-09-04T14:16:53"
 }
