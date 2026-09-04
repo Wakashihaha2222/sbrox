@@ -2,10 +2,10 @@
   "tiers": {
     "4.5": {
       "last_price": 122500,
-      "last_stock": 4681,
+      "last_stock": 1000,
       "target_active": true,
-      "target_notified_stock": 4681,
-      "target_last_notified_ts": 1788484557.8147206
+      "target_notified_stock": 1000,
+      "target_last_notified_ts": 1788501337.6098132
     },
     "4.6": {
       "last_price": 125000,
@@ -16,35 +16,35 @@
     },
     "4.8": {
       "last_price": 130000,
-      "last_stock": 30379,
+      "last_stock": 42491,
       "target_active": true,
-      "target_notified_stock": 30379,
-      "target_last_notified_ts": 1788484557.8147206
+      "target_notified_stock": 42491,
+      "target_last_notified_ts": 1788501337.6098132
     },
     "4.9": {
       "last_price": 132500,
-      "last_stock": 106630,
+      "last_stock": 129282,
       "target_active": true,
-      "target_notified_stock": 106630,
-      "target_last_notified_ts": 1788484557.8147206
+      "target_notified_stock": 129282,
+      "target_last_notified_ts": 1788501337.6098132
     },
     "5": {
       "last_price": 135000,
-      "last_stock": 386771,
+      "last_stock": 227510,
       "target_active": true,
-      "target_notified_stock": 386771,
-      "target_last_notified_ts": 1788484557.8147206
+      "target_notified_stock": 227510,
+      "target_last_notified_ts": 1788501337.6098132
     },
     "5.1": {
       "last_price": 137500,
-      "last_stock": 31494,
+      "last_stock": 59499,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
       "last_price": 140000,
-      "last_stock": 1160996,
+      "last_stock": 1008725,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -155,11 +155,11 @@
       "target_last_notified_ts": 1788119365.585379
     },
     "3.8": {
-      "last_price": 108800,
-      "last_stock": 992,
+      "last_price": 105000,
+      "last_stock": 1000,
       "target_active": true,
       "target_notified_stock": 1776,
-      "target_last_notified_ts": 1788040549.1970117
+      "target_last_notified_ts": 1788501337.6098132
     },
     "3.2": {
       "last_price": 93200,
@@ -204,5 +204,5 @@
       "target_last_notified_ts": 1787489059.0822055
     }
   },
-  "last_checked": "2026-09-04T01:16:05"
+  "last_checked": "2026-09-04T05:55:40"
 }
