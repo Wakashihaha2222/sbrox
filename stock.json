@@ -23,35 +23,35 @@
     },
     "4.9": {
       "last_price": 125500,
-      "last_stock": 5394,
+      "last_stock": 1443,
       "target_active": true,
-      "target_notified_stock": 5394,
-      "target_last_notified_ts": 1788716745.703479
+      "target_notified_stock": 1443,
+      "target_last_notified_ts": 1788742416.3282208
     },
     "5": {
       "last_price": 128000,
-      "last_stock": 76455,
+      "last_stock": 48739,
       "target_active": true,
-      "target_notified_stock": 76455,
-      "target_last_notified_ts": 1788730568.7210567
+      "target_notified_stock": 48739,
+      "target_last_notified_ts": 1788742416.3282208
     },
     "5.1": {
       "last_price": 130500,
-      "last_stock": 2678,
+      "last_stock": 19632,
       "target_active": true,
-      "target_notified_stock": 2678,
-      "target_last_notified_ts": 1788730568.7210567
+      "target_notified_stock": 19632,
+      "target_last_notified_ts": 1788742416.3282208
     },
     "5.2": {
       "last_price": 133000,
-      "last_stock": 82675,
+      "last_stock": 137627,
       "target_active": true,
-      "target_notified_stock": 82675,
-      "target_last_notified_ts": 1788730568.7210567
+      "target_notified_stock": 137627,
+      "target_last_notified_ts": 1788742416.3282208
     },
     "5.3": {
       "last_price": 135500,
-      "last_stock": 456640,
+      "last_stock": 568411,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -86,10 +86,10 @@
     },
     "4.4": {
       "last_price": 113000,
-      "last_stock": 140603,
+      "last_stock": 84521,
       "target_active": true,
-      "target_notified_stock": 140603,
-      "target_last_notified_ts": 1788670818.3759131
+      "target_notified_stock": 84521,
+      "target_last_notified_ts": 1788742416.3282208
     },
     "3.9": {
       "last_price": 100500,
@@ -204,5 +204,5 @@
       "target_last_notified_ts": 1787489059.0822055
     }
   },
-  "last_checked": "2026-09-06T21:36:10"
+  "last_checked": "2026-09-07T00:53:38"
 }
