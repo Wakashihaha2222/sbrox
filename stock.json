@@ -23,49 +23,49 @@
     },
     "4.9": {
       "last_price": 127500,
-      "last_stock": 19598,
+      "last_stock": 1152,
       "target_active": true,
-      "target_notified_stock": 19598,
-      "target_last_notified_ts": 1789073838.8780255
+      "target_notified_stock": 1152,
+      "target_last_notified_ts": 1789080772.946993
     },
     "5": {
       "last_price": 130000,
-      "last_stock": 13514,
+      "last_stock": 35576,
       "target_active": true,
-      "target_notified_stock": 13514,
-      "target_last_notified_ts": 1789073838.8780255
+      "target_notified_stock": 35576,
+      "target_last_notified_ts": 1789080772.946993
     },
     "5.1": {
       "last_price": 132500,
-      "last_stock": 85322,
+      "last_stock": 72183,
       "target_active": true,
-      "target_notified_stock": 85322,
-      "target_last_notified_ts": 1789073838.8780255
+      "target_notified_stock": 72183,
+      "target_last_notified_ts": 1789080772.946993
     },
     "5.2": {
       "last_price": 135000,
-      "last_stock": 98265,
+      "last_stock": 211400,
       "target_active": true,
-      "target_notified_stock": 98265,
-      "target_last_notified_ts": 1789073838.8780255
+      "target_notified_stock": 211400,
+      "target_last_notified_ts": 1789080772.946993
     },
     "5.3": {
       "last_price": 137500,
-      "last_stock": 116848,
+      "last_stock": 119395,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.4": {
       "last_price": 140000,
-      "last_stock": 15395,
+      "last_stock": 315,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.5": {
       "last_price": 142500,
-      "last_stock": 236905,
+      "last_stock": 236505,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -204,5 +204,5 @@
       "target_last_notified_ts": 1787489059.0822055
     }
   },
-  "last_checked": "2026-09-10T20:57:22"
+  "last_checked": "2026-09-10T22:52:54"
 }
