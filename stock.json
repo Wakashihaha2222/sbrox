@@ -9,42 +9,42 @@
     },
     "4.6": {
       "last_price": 125000,
-      "last_stock": 5638,
+      "last_stock": 20930,
       "target_active": true,
-      "target_notified_stock": 5638,
-      "target_last_notified_ts": 1789341935.2043943
+      "target_notified_stock": 20930,
+      "target_last_notified_ts": 1789430528.8251433
     },
     "4.8": {
       "last_price": 130000,
-      "last_stock": 13503,
+      "last_stock": 11406,
       "target_active": true,
-      "target_notified_stock": 13503,
-      "target_last_notified_ts": 1789422893.877725
+      "target_notified_stock": 11406,
+      "target_last_notified_ts": 1789430528.8251433
     },
     "4.9": {
       "last_price": 132500,
-      "last_stock": 5089,
+      "last_stock": 832,
       "target_active": true,
-      "target_notified_stock": 5089,
-      "target_last_notified_ts": 1789422893.877725
+      "target_notified_stock": 832,
+      "target_last_notified_ts": 1789430528.8251433
     },
     "5": {
       "last_price": 135000,
-      "last_stock": 129551,
+      "last_stock": 212262,
       "target_active": true,
-      "target_notified_stock": 129551,
-      "target_last_notified_ts": 1789422893.877725
+      "target_notified_stock": 212262,
+      "target_last_notified_ts": 1789430528.8251433
     },
     "5.1": {
       "last_price": 137500,
-      "last_stock": 354572,
+      "last_stock": 449874,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
       "last_price": 140000,
-      "last_stock": 175490,
+      "last_stock": 149783,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -79,17 +79,17 @@
     },
     "4.7": {
       "last_price": 127500,
-      "last_stock": 317,
+      "last_stock": 453,
       "target_active": true,
       "target_notified_stock": 317,
-      "target_last_notified_ts": 1789348595.5143216
+      "target_last_notified_ts": 1789430528.8251433
     },
     "4.4": {
       "last_price": 120000,
-      "last_stock": 5283,
+      "last_stock": 48716,
       "target_active": true,
-      "target_notified_stock": 5283,
-      "target_last_notified_ts": 1789319874.9746
+      "target_notified_stock": 48716,
+      "target_last_notified_ts": 1789430528.8251433
     },
     "3.9": {
       "last_price": 107500,
@@ -99,18 +99,18 @@
       "target_last_notified_ts": 1789422893.877725
     },
     "4": {
-      "last_price": 105000,
-      "last_stock": 365,
+      "last_price": 110000,
+      "last_stock": 24680,
       "target_active": true,
-      "target_notified_stock": 365,
-      "target_last_notified_ts": 1789258927.4984207
+      "target_notified_stock": 24680,
+      "target_last_notified_ts": 1789430528.8251433
     },
     "4.3": {
-      "last_price": 110500,
-      "last_stock": 548,
+      "last_price": 117500,
+      "last_stock": 4880,
       "target_active": true,
-      "target_notified_stock": 548,
-      "target_last_notified_ts": 1788826958.3535554
+      "target_notified_stock": 4880,
+      "target_last_notified_ts": 1789430528.8251433
     },
     "2.6": {
       "last_price": 82020,
@@ -128,10 +128,10 @@
     },
     "3.7": {
       "last_price": 102500,
-      "last_stock": 389,
+      "last_stock": 866,
       "target_active": true,
       "target_notified_stock": 389,
-      "target_last_notified_ts": 1789307978.243518
+      "target_last_notified_ts": 1789430528.8251433
     },
     "4.1": {
       "last_price": 112500,
@@ -156,10 +156,10 @@
     },
     "3.8": {
       "last_price": 105000,
-      "last_stock": 2858,
+      "last_stock": 8217,
       "target_active": true,
-      "target_notified_stock": 2858,
-      "target_last_notified_ts": 1789307978.243518
+      "target_notified_stock": 8217,
+      "target_last_notified_ts": 1789430528.8251433
     },
     "3.2": {
       "last_price": 93200,
@@ -204,5 +204,5 @@
       "target_last_notified_ts": 1787489059.0822055
     }
   },
-  "last_checked": "2026-09-14T21:54:57"
+  "last_checked": "2026-09-15T00:02:12"
 }
