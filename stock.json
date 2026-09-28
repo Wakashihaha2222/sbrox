@@ -2,24 +2,24 @@
   "tiers": {
     "4.5": {
       "last_price": 122500,
-      "last_stock": 3644,
+      "last_stock": 857,
       "target_active": true,
-      "target_notified_stock": 3807,
-      "target_last_notified_ts": 1790554687.3267083
+      "target_notified_stock": 857,
+      "target_last_notified_ts": 1790596437.5539277
     },
     "4.6": {
       "last_price": 125000,
-      "last_stock": 39233,
+      "last_stock": 11153,
       "target_active": true,
-      "target_notified_stock": 39233,
-      "target_last_notified_ts": 1790554687.3267083
+      "target_notified_stock": 11153,
+      "target_last_notified_ts": 1790596437.5539277
     },
     "4.8": {
       "last_price": 130000,
-      "last_stock": 1509,
+      "last_stock": 11781,
       "target_active": true,
-      "target_notified_stock": 1509,
-      "target_last_notified_ts": 1790573431.6677535
+      "target_notified_stock": 11781,
+      "target_last_notified_ts": 1790596437.5539277
     },
     "4.9": {
       "last_price": 132500,
@@ -30,10 +30,10 @@
     },
     "5": {
       "last_price": 135000,
-      "last_stock": 123365,
+      "last_stock": 38638,
       "target_active": true,
-      "target_notified_stock": 123365,
-      "target_last_notified_ts": 1790573431.6677535
+      "target_notified_stock": 38638,
+      "target_last_notified_ts": 1790596437.5539277
     },
     "5.1": {
       "last_price": 137500,
@@ -44,14 +44,14 @@
     },
     "5.2": {
       "last_price": 140000,
-      "last_stock": 259571,
+      "last_stock": 91938,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.3": {
       "last_price": 142500,
-      "last_stock": 105776,
+      "last_stock": 28031,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -65,7 +65,7 @@
     },
     "5.5": {
       "last_price": 147500,
-      "last_stock": 53345,
+      "last_stock": 53573,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -79,10 +79,10 @@
     },
     "4.7": {
       "last_price": 127500,
-      "last_stock": 1500,
+      "last_stock": 428,
       "target_active": true,
-      "target_notified_stock": 1500,
-      "target_last_notified_ts": 1790573431.6677535
+      "target_notified_stock": 428,
+      "target_last_notified_ts": 1790596437.5539277
     },
     "4.4": {
       "last_price": 113000,
@@ -93,10 +93,10 @@
     },
     "3.9": {
       "last_price": 107500,
-      "last_stock": 469,
+      "last_stock": 470,
       "target_active": true,
       "target_notified_stock": 530,
-      "target_last_notified_ts": 1790573431.6677535
+      "target_last_notified_ts": 1790596437.5539277
     },
     "4": {
       "last_price": 110000,
@@ -106,11 +106,11 @@
       "target_last_notified_ts": 1790535775.031895
     },
     "4.3": {
-      "last_price": 110500,
-      "last_stock": 1426,
+      "last_price": 117500,
+      "last_stock": 401,
       "target_active": true,
-      "target_notified_stock": 1426,
-      "target_last_notified_ts": 1790400407.3208277
+      "target_notified_stock": 401,
+      "target_last_notified_ts": 1790596437.5539277
     },
     "2.6": {
       "last_price": 82020,
@@ -134,11 +134,11 @@
       "target_last_notified_ts": 1790227563.4849708
     },
     "4.1": {
-      "last_price": 105500,
-      "last_stock": 81023,
+      "last_price": 112500,
+      "last_stock": 2511,
       "target_active": true,
-      "target_notified_stock": 81023,
-      "target_last_notified_ts": 1790363717.0153522
+      "target_notified_stock": 2511,
+      "target_last_notified_ts": 1790596437.5539277
     },
     "2.9": {
       "last_price": 90330,
@@ -204,5 +204,5 @@
       "target_last_notified_ts": 1790193146.4882443
     }
   },
-  "last_checked": "2026-09-28T05:30:35"
+  "last_checked": "2026-09-28T11:54:00"
 }
