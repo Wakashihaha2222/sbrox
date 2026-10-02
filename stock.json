@@ -16,10 +16,10 @@
     },
     "4.8": {
       "last_price": 130000,
-      "last_stock": 39457,
+      "last_stock": 3127,
       "target_active": true,
-      "target_notified_stock": 39457,
-      "target_last_notified_ts": 1790901646.9758852
+      "target_notified_stock": 3127,
+      "target_last_notified_ts": 1790921443.343311
     },
     "4.9": {
       "last_price": 132500,
@@ -30,10 +30,10 @@
     },
     "5": {
       "last_price": 135000,
-      "last_stock": 28182,
+      "last_stock": 26368,
       "target_active": true,
-      "target_notified_stock": 28182,
-      "target_last_notified_ts": 1790901646.9758852
+      "target_notified_stock": 26368,
+      "target_last_notified_ts": 1790921443.343311
     },
     "5.1": {
       "last_price": 137500,
@@ -44,28 +44,28 @@
     },
     "5.2": {
       "last_price": 140000,
-      "last_stock": 47834,
+      "last_stock": 58222,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.3": {
       "last_price": 142500,
-      "last_stock": 20599,
+      "last_stock": 78162,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.4": {
       "last_price": 145000,
-      "last_stock": 12002,
+      "last_stock": 602,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.5": {
       "last_price": 147500,
-      "last_stock": 9113,
+      "last_stock": 32999,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -107,10 +107,10 @@
     },
     "4.3": {
       "last_price": 117500,
-      "last_stock": 877,
+      "last_stock": 854,
       "target_active": true,
       "target_notified_stock": 401,
-      "target_last_notified_ts": 1790901646.9758852
+      "target_last_notified_ts": 1790921443.343311
     },
     "2.6": {
       "last_price": 82020,
@@ -204,5 +204,5 @@
       "target_last_notified_ts": 1790193146.4882443
     }
   },
-  "last_checked": "2026-10-02T00:40:50"
+  "last_checked": "2026-10-02T06:10:47"
 }
