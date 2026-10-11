@@ -16,24 +16,24 @@
     },
     "4.8": {
       "last_price": 130000,
-      "last_stock": 10985,
+      "last_stock": 391,
       "target_active": true,
-      "target_notified_stock": 10985,
-      "target_last_notified_ts": 1791685038.3309264
+      "target_notified_stock": 391,
+      "target_last_notified_ts": 1791709075.0757055
     },
     "4.9": {
       "last_price": 132500,
-      "last_stock": 7346,
+      "last_stock": 3000,
       "target_active": true,
-      "target_notified_stock": 7346,
-      "target_last_notified_ts": 1791665393.5405
+      "target_notified_stock": 3000,
+      "target_last_notified_ts": 1791709075.0757055
     },
     "5": {
       "last_price": 135000,
-      "last_stock": 2553,
+      "last_stock": 223483,
       "target_active": true,
-      "target_notified_stock": 2553,
-      "target_last_notified_ts": 1791676461.6807375
+      "target_notified_stock": 223483,
+      "target_last_notified_ts": 1791709075.0757055
     },
     "5.1": {
       "last_price": 137500,
@@ -44,28 +44,28 @@
     },
     "5.2": {
       "last_price": 140000,
-      "last_stock": 658427,
+      "last_stock": 364892,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.3": {
       "last_price": 142500,
-      "last_stock": 29139,
+      "last_stock": 375598,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.4": {
       "last_price": 145000,
-      "last_stock": 552010,
+      "last_stock": 292520,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.5": {
       "last_price": 147500,
-      "last_stock": 106944,
+      "last_stock": 30842,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -204,5 +204,5 @@
       "target_last_notified_ts": 1790193146.4882443
     }
   },
-  "last_checked": "2026-10-11T02:17:20"
+  "last_checked": "2026-10-11T08:57:56"
 }
