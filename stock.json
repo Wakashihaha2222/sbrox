@@ -2,24 +2,24 @@
   "tiers": {
     "4.5": {
       "last_price": 122500,
-      "last_stock": 4698,
+      "last_stock": 3035,
       "target_active": true,
-      "target_notified_stock": 4698,
-      "target_last_notified_ts": 1791982965.0047297
+      "target_notified_stock": 3035,
+      "target_last_notified_ts": 1792021940.314997
     },
     "4.6": {
       "last_price": 125000,
-      "last_stock": 643,
+      "last_stock": 975,
       "target_active": true,
       "target_notified_stock": 643,
-      "target_last_notified_ts": 1791935573.1096542
+      "target_last_notified_ts": 1792021940.314997
     },
     "4.8": {
       "last_price": 130000,
-      "last_stock": 24993,
+      "last_stock": 23648,
       "target_active": true,
-      "target_notified_stock": 24993,
-      "target_last_notified_ts": 1792011899.7424695
+      "target_notified_stock": 23648,
+      "target_last_notified_ts": 1792021940.314997
     },
     "4.9": {
       "last_price": 132500,
@@ -37,35 +37,35 @@
     },
     "5.1": {
       "last_price": 137500,
-      "last_stock": 11840,
+      "last_stock": 41329,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
       "last_price": 140000,
-      "last_stock": 216835,
+      "last_stock": 288921,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.3": {
       "last_price": 142500,
-      "last_stock": 27185,
+      "last_stock": 145181,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.4": {
       "last_price": 145000,
-      "last_stock": 146045,
+      "last_stock": 298585,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.5": {
       "last_price": 147500,
-      "last_stock": 225468,
+      "last_stock": 225235,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -204,5 +204,5 @@
       "target_last_notified_ts": 1790193146.4882443
     }
   },
-  "last_checked": "2026-10-14T21:05:04"
+  "last_checked": "2026-10-14T23:52:23"
 }
