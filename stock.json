@@ -16,24 +16,24 @@
     },
     "4.8": {
       "last_price": 130000,
-      "last_stock": 179549,
+      "last_stock": 21228,
       "target_active": true,
-      "target_notified_stock": 179549,
-      "target_last_notified_ts": 1792081360.691505
+      "target_notified_stock": 21228,
+      "target_last_notified_ts": 1792094173.2248898
     },
     "4.9": {
       "last_price": 132500,
-      "last_stock": 47181,
+      "last_stock": 62123,
       "target_active": true,
-      "target_notified_stock": 47181,
-      "target_last_notified_ts": 1792081360.691505
+      "target_notified_stock": 62123,
+      "target_last_notified_ts": 1792094173.2248898
     },
     "5": {
       "last_price": 135000,
-      "last_stock": 95005,
+      "last_stock": 82580,
       "target_active": true,
-      "target_notified_stock": 95005,
-      "target_last_notified_ts": 1792081360.691505
+      "target_notified_stock": 82580,
+      "target_last_notified_ts": 1792094173.2248898
     },
     "5.1": {
       "last_price": 137500,
@@ -44,28 +44,28 @@
     },
     "5.2": {
       "last_price": 140000,
-      "last_stock": 7286,
+      "last_stock": 2186,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.3": {
       "last_price": 142500,
-      "last_stock": 285614,
+      "last_stock": 108158,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.4": {
       "last_price": 145000,
-      "last_stock": 275079,
+      "last_stock": 273755,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.5": {
       "last_price": 147500,
-      "last_stock": 113695,
+      "last_stock": 105624,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -204,5 +204,5 @@
       "target_last_notified_ts": 1790193146.4882443
     }
   },
-  "last_checked": "2026-10-15T16:22:42"
+  "last_checked": "2026-10-15T19:56:15"
 }
