@@ -15,57 +15,57 @@
       "target_last_notified_ts": 1793483697.139116
     },
     "4.8": {
-      "last_price": 135746,
-      "last_stock": 20909,
+      "last_price": 135880,
+      "last_stock": 6715,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "4.9": {
-      "last_price": 138365,
-      "last_stock": 1006,
+      "last_price": 138503,
+      "last_stock": 805,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5": {
-      "last_price": 140985,
-      "last_stock": 163011,
+      "last_price": 141125,
+      "last_stock": 32788,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.1": {
-      "last_price": 143605,
-      "last_stock": 15563,
+      "last_price": 143748,
+      "last_stock": 6051,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.2": {
-      "last_price": 146224,
-      "last_stock": 576380,
+      "last_price": 146370,
+      "last_stock": 563476,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.3": {
-      "last_price": 148844,
-      "last_stock": 302204,
+      "last_price": 148993,
+      "last_stock": 486005,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.4": {
-      "last_price": 151464,
+      "last_price": 151615,
       "last_stock": 5518,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
     },
     "5.5": {
-      "last_price": 154084,
-      "last_stock": 36680,
+      "last_price": 154238,
+      "last_stock": 68802,
       "target_active": false,
       "target_notified_stock": null,
       "target_last_notified_ts": null
@@ -204,5 +204,5 @@
       "target_last_notified_ts": 1792645825.1198003
     }
   },
-  "last_checked": "2026-11-01T00:30:25"
+  "last_checked": "2026-11-01T06:38:31"
 }
